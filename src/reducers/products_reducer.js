@@ -10,7 +10,12 @@ import {
 } from '../actions'
 
 const products_reducer = (state, action) => {
-  return state
+  if (action.type === SIDEBAR_OPEN) {
+    return {...state, IsSidebarOpen: true}
+  }
+  if (action.type === SIDEBAR_CLOSE) {
+    return {...state, IsSidebarOpen: false}
+  }
   throw new Error(`No Matching "${action.type}" - action type`)
 }
 
