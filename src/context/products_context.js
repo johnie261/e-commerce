@@ -48,12 +48,12 @@ export const ProductsProvider = ({ children }) => {
     }
   };
 
-  const fetcSingleProducts = async(url) => {
+  const fetchSingleProducts = async(url) => {
     dispatch({type: GET_SINGLE_PRODUCT_BEGIN})
     try {
       const response = await axios.get(url);
       const singleProduct = response.data;
-      dispatch({type: GET_PRODUCTS_SUCCESS, payload: singleProduct})
+      dispatch({type: GET_SINGLE_PRODUCT_SUCCESS, payload: singleProduct})
     } catch (error) {
       dispatch({type: GET_SINGLE_PRODUCT_ERROR})
     }
@@ -63,7 +63,7 @@ export const ProductsProvider = ({ children }) => {
     fetchProducts(url)
   }, [])
   return (
-    <ProductsContext.Provider value={{...state, openSidebar, closeSidebar}}>
+    <ProductsContext.Provider value={{...state, openSidebar, closeSidebar, fetchSingleProducts}}>
       {children}
     </ProductsContext.Provider>
   )
