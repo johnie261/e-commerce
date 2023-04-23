@@ -10,7 +10,15 @@ import {
 } from '../actions'
 
 const filter_reducer = (state, action) => {
-  return state
+  if(action.type === LOAD_PRODUCTS) {
+    return {...state, allProducts: [...action.payload], filtredProducts: [...action.payload]}
+  }
+  if(action.type === SET_GRIDVIEW) {
+    return {...state, Grid_view: true}
+  }
+  if(action.type === SET_LISTVIEW) {
+    return {...state, Grid_view: false}
+  }
   throw new Error(`No Matching "${action.type}" - action type`)
 }
 
