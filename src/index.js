@@ -18,11 +18,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
    <Auth0Provider
     domain="dev-zd1tx5yveho4xu03.us.auth0.com"
-    clientId="jesgf6k1RpyxChnflBabuFDeMxKl3GFk"
-    authorizationParams={{
-      redirect_uri: window.location.origin
-    }}
+    //clientId="jesgf6k1RpyxChnflBabuFDeMxKl3GFk"
+    clientId="flQiKdKjvbA5sWzEwX9FxuaDYzqINViF"
+    redirectUri= {window.location.origin}
+    cacheLocation= 'localstorage'   
   >
+   <UserProvider>
     <ProductsProvider>
        <FilterProvider>
          <CartProvider>
@@ -30,5 +31,6 @@ root.render(
          </CartProvider>         
        </FilterProvider>
     </ProductsProvider>
+    </UserProvider>
    </Auth0Provider>
 );
