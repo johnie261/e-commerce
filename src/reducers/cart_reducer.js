@@ -68,7 +68,7 @@ const cart_reducer = (state, action ) => {
     })
     return {...state, cart: temp}
   }
-  if(action.type == COUNT_CART_TOTALS){
+  if(action.type === COUNT_CART_TOTALS){
     console.log(state.cart)
     const {totalItems, totalAmount} = state.cart.reduce((total, cartItem)=>{
       const {amount, price} = cartItem
