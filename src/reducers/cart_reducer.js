@@ -69,15 +69,15 @@ const cart_reducer = (state, action ) => {
     return {...state, cart: temp}
   }
   if(action.type === COUNT_CART_TOTALS){
-    console.log(state.cart)
     const {totalItems, totalAmount} = state.cart.reduce((total, cartItem)=>{
       const {amount, price} = cartItem
-      total.totalItems += amount;
+      total.totalItems += Math.ceil(amount)
       total.totalAmount += price * amount
       return total
     },{totalItems: 0, totalAmount:0}
   )
-    return {...state, totalItems, totalAmount }
+  const roundedTotalAmount = Math.ceil(totalAmount);
+    return {...state, totalItems, totalAmount: roundedTotalAmount }
   }
 
   throw new Error(`No Matching "${action.type}" - action type`)

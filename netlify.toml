@@ -1,2 +1,6 @@
 [build]
 functions = "/functions"
+
+[target]
+  # Configure the target port for the framework
+  port = 3000

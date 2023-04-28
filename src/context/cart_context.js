@@ -21,7 +21,7 @@ const initialState = {
   cart: getLocalStorage(),
   totalItems: 0,
   totalAmount: 0,
-  shippingFee: 534,
+  shippingFee: 500,
 }
 
 const CartContext = React.createContext()
