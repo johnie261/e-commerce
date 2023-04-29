@@ -13,7 +13,9 @@ const AboutPage = () => {
           <h2>Our story</h2>
           <div className="underline"></div>
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae totam recusandae minima assumenda temporibus, at possimus in fugit voluptas ad, repellat odit saepe! Beatae, fuga itaque odit hic nihil vero!</p>
+        <p>
+        Welcome to [Your Ecommerce Platform Name], where shopping meets extraordinary. Discover a curated selection of exceptional products sourced from trusted vendors worldwide. With a seamless and user-friendly interface, navigate through diverse categories, uncover hidden gems, and enjoy outstanding customer support. Join us on this exciting journey as we unmask the perfect deals, empower your shopping adventures, and bring a touch of magic to every purchase. Experience ecommerce like never before with [Your Ecommerce Platform Name]. Shop confidently, discover remarkable products, and embrace the extraordinary.
+        </p>
       </article>
     </Wrapper>
   </main>

@@ -7,12 +7,12 @@ import heroBcg2 from '../assets/hero-bcg-2.jpeg'
 const Hero = () => {
   return <Wrapper className="section-center">
     <article className="content">
-      <h1>
-        design your <br />
-        comfort
+      <h1 className="heading">
+      Unmask the <br />
+      Perfect Deals
       </h1>
       <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae totam recusandae minima assumenda temporibus, at possimus in fugit voluptas ad, repellat
+      Discover an incredible array of unbeatable savings on our ecommerce platform. Explore exclusive offers, limited-time promotions, and jaw-dropping discounts that will leave you in awe. Elevate your shopping experience and unleash the power of incredible deals. Don't miss out start unmasking the perfect deals today and enjoy the thrill of unbeatable savings.
       </p>
       <Link to="/products" className="btn hero-btn">
         shop now
@@ -29,6 +29,11 @@ const Wrapper = styled.section`
   min-height: 60vh;
   display: grid;
   place-items: center;
+  .content {
+    .heading {
+      line-height: 1.3;
+    }
+  }
   .img-container {
     display: none;
   }
