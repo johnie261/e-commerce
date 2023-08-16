@@ -1,5 +1,5 @@
 <a name="readme-top"></a>
-<h1 align='center'> Expense Tracker </h1>
+<h1 align='center'> ShopFinity </h1>
 
 # 📗 Table of Contents
 
